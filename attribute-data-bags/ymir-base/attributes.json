@@ -1,18 +1,18 @@
 {
   "id": "attributes",
   "all": {
-    "some_fake_key": {
-      "some_fake_value": [
-        "fake_value_1",
-        "fake_value_2"
-      ]
-    },
     "audit": {
       "reporter": "chef-server-automate",
       "fetcher": "chef-server",
       "interval": {
         "enabled": true,
         "time": 1800
+      },
+      "some_fake_key": {
+        "some_fake_value": [
+          "fake_value_1",
+          "fake_value_2"
+        ]
       },
       "profiles": {
         "linux-baseline": {

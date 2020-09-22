@@ -17,3 +17,6 @@ cookbook 'ymir-base', path: '.'
 cookbook 'attributes-loader', path: '../attributes-loader'
 cookbook 'audit', github: 'chef-cookbooks/audit', branch: 'master' #, tag: 'v9.5.0'
 cookbook 'os-hardening', github: 'dev-sec/chef-os-hardening', branch: 'master' #, tag: 'v4.0.0'
+
+# Data bag load precedence (right side takes precedence)
+default['attributes-loader']['dbags'] = ['global', 'ymir', node.policy_name]
