@@ -1,0 +1,51 @@
+{
+  "id": "attributes",
+  "all": {
+    "audit": {
+      "control_results_limit": 50,
+      "attributes": {
+        "data_bag": "global"
+      },
+      "reporter": "chef-automate",
+      "fetcher": "chef-automate",
+      "interval": {
+        "enabled": false,
+        "time": 400
+      }
+    },
+    "os-hardening": {
+      "auth": {
+        "pw_max_age": 60,
+        "pw_min_age": 7,
+        "retries": 5,
+        "lockout_time": 600
+      },
+      "security": {
+        "packages": {
+          "list": [
+            "xinetd",
+            "inetd",
+            "ypserv",
+            "telnet-server"
+          ]
+        }
+      }
+    }
+  },
+  "local": {
+    "audit": {
+      "interval": {
+        "enabled": true,
+        "time": 200
+      }
+    },
+    "os-hardening": {
+      "auth": {
+        "pw_max_age": 20,
+        "pw_min_age": 7,
+        "retries": 20,
+        "lockout_time": 30
+      }
+    }
+  }
+}

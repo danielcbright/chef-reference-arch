@@ -1,0 +1,19 @@
+{
+  "id": "attributes",
+  "all": {
+    "audit": {
+      "interval": {
+        "enabled": false,
+        "time": 400
+      }
+    }
+  },
+  "local": {
+    "audit": {
+      "interval": {
+        "enabled": true,
+        "time": 500
+      }
+    }
+  }
+}

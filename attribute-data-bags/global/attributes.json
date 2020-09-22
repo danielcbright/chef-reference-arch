@@ -1,0 +1,64 @@
+{
+  "id": "attributes",
+  "all": {
+    "audit": {
+      "reporter": "chef-server-automate",
+      "fetcher": "chef-server",
+      "interval": {
+        "enabled": true,
+        "time": 1800
+      },
+      "profiles": {
+        "linux-baseline": {
+          "compliance": "admin/linux-baseline"
+        },
+        "dbright-base": {
+          "compliance": "admin/dbright-base"
+        }
+      },
+      "waiver_file": "/opt/chef/waivers/waiver.yaml"
+    },
+    "ntp": {
+      "servers":[
+        "time.google.com",
+        "time1.google.com",
+        "time2.google.com",
+        "time3.google.com",
+        "time4.google.com",
+        "automate.dbright.io"
+      ]
+    },
+    "os-hardening": {
+      "auth": {
+        "pw_max_age": 60,
+        "pw_min_age": 7,
+        "retries": 5,
+        "lockout_time": 600
+      },
+      "security": {
+        "packages": {
+          "list": [
+            "xinetd",
+            "inetd",
+            "ypserv",
+            "telnet-server"
+          ]
+        }
+      }
+    }
+  },
+  "local": {
+    "audit": {
+      "reporter": "chef-automate",
+      "fetcher": "chef-automate"
+    },
+    "os-hardening": {
+      "auth": {
+        "pw_max_age": 20,
+        "pw_min_age": 7,
+        "retries": 20,
+        "lockout_time": 30
+      }
+    }
+  }
+}

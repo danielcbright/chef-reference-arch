@@ -1,0 +1,23 @@
+{
+  "id": "attributes",
+  "all": {
+    "audit": {
+      "control_results_limit": 60,
+      "attributes": {
+        "data_bag": "ymir-lb"
+      },
+      "interval": {
+        "enabled": false,
+        "time": 400
+      }
+    }
+  },
+  "local": {
+    "audit": {
+      "interval": {
+        "enabled": true,
+        "time": 500
+      }
+    }
+  }
+}
