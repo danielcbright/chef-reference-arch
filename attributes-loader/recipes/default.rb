@@ -30,3 +30,10 @@ for dbag in node.default['attributes-loader']['dbags']
     puts "==== Data Bag '#{dbag}:#{node.policy_group}' not found, using default attributes"
   end
 end
+
+if node.policy_group == "local"
+  output="#{Chef::JSONCompat.to_json_pretty(node.to_hash)}"
+  file '/tmp/node.json' do
+    content output
+  end
+end

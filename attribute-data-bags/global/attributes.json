@@ -1,6 +1,21 @@
 {
   "id": "attributes",
+  "version": "6",
   "all": {
+    "waivers": {
+      "controls": {
+        "my_waiver_1": {
+          "expiration_date": "2020-10-08",
+          "run": true,
+          "justification": "Setting max days for 20 for local testing"
+        },
+        "my_waiver_2": {
+          "expiration_date": "2020-10-08",
+          "run": true,
+          "justification": "Setting max days for 20 for local testing"
+        }
+      }
+    },
     "some_fake_key": {
       "some_fake_value": [
         "fake_value_1",
@@ -68,10 +83,6 @@
     }
   },
   "dev-sandbox": {
-    "audit": {
-      "reporter": "chef-automate",
-      "fetcher": "chef-automate"
-    },
     "os-hardening": {
       "auth": {
         "pw_max_age": 20,

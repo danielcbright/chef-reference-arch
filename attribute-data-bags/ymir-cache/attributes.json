@@ -1,8 +1,16 @@
 {
   "id": "attributes",
+  "version": "2",
   "all": {
     "sysctl": {
       "vm.overcommit_memory": 1
+    },
+    "waivers": {
+      "os-05": {
+        "expiration_date": "2020-10-01",
+        "run": true,
+        "justification": "Setting max days for 20 for local testing"
+      }
     }
   }
 }

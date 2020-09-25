@@ -32,3 +32,5 @@ suites:
       audit:
         reporter: "chef-automate"
         fetcher: "chef-automate"
+    verifier:
+      name: inspec
